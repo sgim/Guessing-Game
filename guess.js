@@ -6,10 +6,18 @@ var guess = (function () {
     textStatus = document.getElementById("status"),
     duplicate = !1,
     playersGuess,
+    b,
     playAgain = document.getElementById("playAgain"),
     theGuess = document.getElementById("playersGuess"),
     getHint = document.getElementById("hint"),
     guessCount = document.getElementById("guess-count");
+
+  function startGame() {
+    previousGuess = [];
+    numberToGuess = (100 * Math.random() + 1) | 0;
+    //isItTheNumber(numberToGuess);
+    guessCount.innerHTML = (playerGuessCount = 5) + " ";
+  }
 
   function doesNumberToGuessExist() {
     playersGuess = parseInt(theGuess.value, 10), null === numberToGuess ? (startGame(), theGuess.value = "") : playerGuessCount > 0 && (isItTheNumber(numberToGuess));
@@ -20,14 +28,8 @@ var guess = (function () {
     numberToGuess = (100 * Math.random() + 1) | 0;
   }
 
-  function startGame() {
-    previousGuess = [];
-    createNumberToGuess(), isItTheNumber(numberToGuess);
-    guessCount.innerHTML = playerGuessCount = 5;
-  }
-
   function hotOrCold() {
-    var b = Math.abs(theGuess.value - numberToGuess);
+    b = Math.abs(theGuess.value - numberToGuess);
     return 5 >= b ? "Super Hot" : 10 >= b ? "Hot" : 15 >= b ? "Warm" : b > 20 ? "Cold" : "Ice Cold"
   }
 
@@ -38,13 +40,14 @@ var guess = (function () {
   }
 
   function guessesRemaining() {
-    guessCount.innerHTML = playerGuessCount >= 2 ? (playerGuessCount -= 1) : "Sorry, Play Again!";
+    guessCount.innerHTML = (playerGuessCount -= 1) + " ";
   }
 
   function isItTheNumber(a) {
     checkAnswer();
     textStatus.innerHTML = duplicate ? "You already picked that number" : 
-      parseInt(playersGuess) == parseInt(a) ? "You are CORRECT!" : (previousGuess.push(playersGuess), guessesRemaining(), "You are " + hotOrCold());
+      (1 * playersGuess) === a ? "You are CORRECT!" : (previousGuess.push(playersGuess), guessesRemaining(), "You are " + hotOrCold());
+    !playerGuessCount && (textStatus.innerHTML = "Sorry, Play Again!");
   }
 
   function reset() {
@@ -53,15 +56,10 @@ var guess = (function () {
   }
 
   function hint() {
-    guessCount.innerHTML = numberToGuess;
-  }
-
-  function checkGuess(n) {
-    
+    textStatus.innerHTML = numberToGuess;
   }
 
   return {
-    checkGuess, checkGuess,
     doesExist: doesNumberToGuessExist,
     reset: reset,
     hint: hint

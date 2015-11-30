@@ -16,8 +16,9 @@ h1 {
 input {
   font-size: 1.2em;
   outline: none;
-  background-color: #43b000;
-  border-radius: 20px;
+  background-color: rgba(0,100,0,0.5);
+  border-radius: 8px;
+  border: black 0.2em solid;
   width: 9em;
   height: 3.5em;
   margin: 2em auto;
@@ -30,12 +31,24 @@ input {
 }
 
 #status {
-  display: block;
+
 }
 
 button {
   outline: none;
   margin: 0 auto;
+  display: inline-block;
+}
+
+.guess_count {
+  display: inline;
+}
+
+#guess-count {
+  display: inline;
+}
+
+.out_of {
   display: inline-block;
 }
 

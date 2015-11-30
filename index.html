@@ -12,14 +12,14 @@
     <h1 id='guess'>Guess The Number</h1>
 
     <input id='playersGuess' placeholder='Input Number 1-100' onkeydown="event.keyCode === 13 && guess.doesExist()" value="">
-    <h3 id='status'></h3>
+    <h3 id='status'>Welcome!</h3>
 
-    <button class="submit" onclick='guess.doesExist()'>Submit Your Guess</button>
-    <button class='playAgain' onclick='guess.reset()'>Play Again</button>
-    <button class='hint' onclick='guess.hint()'>Give me a Hint</button>
-
+    <button class="submit" onclick='guess.doesExist()'>Submit</button>
+    <button class='playAgain' onclick='guess.reset()'>Reset</button>
+    <button class='hint' onclick='guess.hint()'>Hint</button>
+<br>
     <h3 class="guess_count">Guesses Remaining</h3>
-    <h3 id='guess-count'>5</h3>
+    <h3 id='guess-count'>5 </h3><h3 class="out_of"> / 5</h3>
     <script src='guess.js'></script>
   </body>
 </html>

@@ -1,71 +1,58 @@
-body {
-  margin: 0 auto;
-  text-align: center;
+html body buttons p img div h1 h2 h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  top: 0;
+  left: 0;
 }
 
-h1 {
-  background-color: black;
-  margin: 0 auto;
-  padding: 0.5em 0 0.25em 0;
-  color: rgba(170,0,54,1);
-  font: bold 4em Helvetica, Arial, Sans-Serif;
-  text-shadow: 0px 1px 1px #4d4d4d;
-  font: 80px;
-}
-
-input {
-  font-size: 1.2em;
-  outline: none;
-  background-color: rgba(0,100,0,0.5);
-  border-radius: 8px;
-  border: black 0.2em solid;
-  width: 9em;
-  height: 3.5em;
-  margin: 2em auto;
-  margin-bottom: 2em;
-  display: inline-block;
-}
-
-.submit {
-  display: block;
+.input {
+	width: 200px;
+	height: 75px;
+	margin: 10px auto;
+	display: block;
 }
 
 #status {
+	display: none;
+}
+
+#image {
+	margin: 20px;
+}
+
+.buttons {
+	margin: 15px;
+}
+
+#guess {
+  margin: 40px;
+/*	font-weight: bold;
+*//*	display: inline;
+
+*/
+font-size: 50px;
+color: rgba(170,0,54,1);
+   font: bold 52px Helvetica, Arial, Sans-Serif;
+   			text-shadow: 0px 1px 1px #4d4d4d;
+        color: rgba(170,0,54,1);
+        font: 80px;
+}
+
+.main-box {
+	width:275px;
+	padding:15px;
+	border-radius: 10px;
+	margin:0px auto;
+	-webkit-box-shadow: 10px 10px 196px -35px rgba(255,255,255,1);
+	-moz-box-shadow: 10px 10px 196px -35px rgba(255,255,255,1);
+	box-shadow: 10px 10px 196px -35px rgba(255,255,255,1);
 
 }
 
-button {
-  outline: none;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-.guess_count {
-  display: inline;
-}
-
-#guess-count {
-  display: inline;
-}
-
-.out_of {
-  display: inline-block;
-}
-
-
-/**************
-PLACEHOLDER TEXT
-***************/
-
-::-webkit-input-placeholder {
-  color: black;
-}
-:-moz-placeholder {
-  color: black;
-}
-::-moz-placeholder {
-  color: black;
-}
-:-ms-input-placeholder {
-  color: black;
+#fs-image{
+	border-radius: 6px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(170,0,54,1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(170,0,54,1);
+	box-shadow: 10px 10px 5px 0px rgba(170,0,54,1);
 }

@@ -4,22 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fullstack - Guessing Game MOD_1</title>
+    <title>Fullstack - Number Guessing Game</title>
+    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-
-    <h1 id='guess'>Guess The Number</h1>
-
-    <input id='playersGuess' placeholder='Input Number 1-100' onkeydown="event.keyCode === 13 && guess.doesExist()" value="">
-    <h3 id='status'>Welcome!</h3>
-
-    <button class="submit" onclick='guess.doesExist()'>Submit</button>
-    <button class='playAgain' onclick='guess.reset()'>Reset</button>
-    <button class='hint' onclick='guess.hint()'>Hint</button>
-<br>
-    <h3 class="guess_count">Guesses Remaining</h3>
-    <h3 id='guess-count'>5 </h3><h3 class="out_of"> / 5</h3>
+    <div class="site-wrapper">
+      <div id='image'>
+      	<img src='http://preview.fullstackacademy.com/images/fa-logo@2x.png' alt='fullstack-logo' id='fs-image'>
+      </div>
+      <h1 id='guess'>Guess The Number</h1>
+      <div class='main-box'>
+        <input type="text" id='playersGuess' placeholder='Input Number 1-100' class='form-control input' onkeydown="if (event.keyCode ===13) doesNumberToGuessExist()" />
+        <h3 id='status'></h3>
+        <button type='button' id='playersGuess' onclick='doesNumberToGuessExist()' class="btn btn-lg btn-info">Submit Your Guess</button>
+      </div>
+      <div class='buttons'>
+        <button type='button'id='playersGuess' onclick='playAgain()' class="btn btn-lg btn-default">Play Again</button>
+        <button type='button' id='playersGuess' onclick='hint()' class= 'btn btn-lg btn-default'>Give me a Hint</button>
+       </div>
+       <h3 id='guess-count'> 5 Guess Remaining </h3>
+      </div>
+    </div>
     <script src='guess.js'></script>
   </body>
 </html>

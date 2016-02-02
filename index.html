@@ -11,13 +11,13 @@
     <h1 class="title">Guess The Number</h1>
     <h2 id='status' class="status">Input a number between 1 and 100</h2>
     <div class="main">
-      <div class="section left">
-        <button onclick='playAgain()' class="reset">Play Again</button>
-        <button onclick='hint()' class="hint">Reveal Number</button>
-      </div>
       <div class="section right">
         <input type="text" id='playersGuess' class="input" onkeydown="if (event.keyCode ===13) doesNumberToGuessExist()" autofocus pattern="(100|\d{1,2})" />
         <button onclick='doesNumberToGuessExist()' class="submit">Submit</button>
+      </div>
+      <div class="section left">
+        <button onclick='playAgain()' class="reset">Play Again</button>
+        <button onclick='hint()' class="hint">Get Answer</button>
       </div>
     </div>
     <h3 id='guess-count' class="counter"> 5 Guess Remaining </h3>

@@ -13,8 +13,8 @@ body {
 .title {
   text-align: center;
   color: #ffffff;
-  padding: 0.3em 0 0 0;
-  font-size: 2.7em;
+  padding: 0.8em 0 0 0;
+  font-size: 2.9em;
   font-family: Verdana, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -24,8 +24,8 @@ body {
   margin: 1em 0 1em 0;
   font-size: 2rem;
   text-align: center;
-  border-top: 0.2em black solid;
-  border-bottom: 0.2em black solid;
+  border-top: 0.1em black solid;
+  border-bottom: 0.1em black solid;
   padding: 0.5em;
   background: white;
 }
@@ -33,6 +33,7 @@ body {
 
 }
 button {
+  text-transform: uppercase;
   background: #444444;
   color: #ffffff;
   border: 2px black solid;
@@ -60,7 +61,7 @@ button:hover {
   justify-content: space-around;
 }
 .reset, .hint {
-  width: 9rem;
+  width: 10rem;
   height: 5rem;
 }
 .right {

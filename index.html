@@ -4,28 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fullstack - Number Guessing Game</title>
-    <!-- Custom styles for this template -->
+    <title>Ari's Fullstack - Number Guessing Game!</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="site-wrapper">
-      <div id='image'>
-      	<img src='http://preview.fullstackacademy.com/images/fa-logo@2x.png' alt='fullstack-logo' id='fs-image'>
+    <h1 class="title">Guess The Number</h1>
+    <h2 id='status' class="status">Input a number between 1 and 100</h2>
+    <div class="main">
+      <div class="section left">
+        <button onclick='playAgain()' class="reset">Play Again</button>
+        <button onclick='hint()' class="hint">Reveal Number</button>
       </div>
-      <h1 id='guess'>Guess The Number</h1>
-      <div class='main-box'>
-        <input type="text" id='playersGuess' placeholder='Input Number 1-100' class='form-control input' onkeydown="if (event.keyCode ===13) doesNumberToGuessExist()" />
-        <h3 id='status'></h3>
-        <button type='button' id='playersGuess' onclick='doesNumberToGuessExist()' class="btn btn-lg btn-info">Submit Your Guess</button>
-      </div>
-      <div class='buttons'>
-        <button type='button'id='playersGuess' onclick='playAgain()' class="btn btn-lg btn-default">Play Again</button>
-        <button type='button' id='playersGuess' onclick='hint()' class= 'btn btn-lg btn-default'>Give me a Hint</button>
-       </div>
-       <h3 id='guess-count'> 5 Guess Remaining </h3>
+      <div class="section right">
+        <input type="text" id='playersGuess' class="input" onkeydown="if (event.keyCode ===13) doesNumberToGuessExist()" autofocus pattern="(100|\d{1,2})" />
+        <button onclick='doesNumberToGuessExist()' class="submit">Submit</button>
       </div>
     </div>
+    <h3 id='guess-count' class="counter"> 5 Guess Remaining </h3>
     <script src='guess.js'></script>
   </body>
 </html>

@@ -20,7 +20,7 @@ body {
   text-transform: uppercase;
 }
 
-.status {
+.status, .counter {
   margin: 1em 0 1em 0;
   font-size: 2rem;
   text-align: center;
@@ -30,8 +30,17 @@ body {
   background: white;
 }
 .counter {
-  font-size: 2em;
-  text-align: center;
+
+}
+button {
+  background: #444444;
+  color: #ffffff;
+  border: 2px black solid;
+  font-size: 1.2rem;
+}
+button:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
 .main {
@@ -52,24 +61,26 @@ body {
 }
 .reset, .hint {
   width: 9rem;
-  height: 3rem;
+  height: 5rem;
 }
 .right {
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .input {
-  height: 5rem;
-  width: 5rem;
+  height: 10rem;
+  width: 10rem;
   text-align: center;
   font-weight: bold;
   outline: none;
+  border: 2px black solid;
+  font-size: 4em;
 }
 .input:invalid {
   background: #aa0000;
 }
 .submit {
-  height: 5.4rem;
-  width: 5rem;
+  height: 10.4rem;
+  width: 10rem;
+  font-size: 2rem;
 }

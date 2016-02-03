@@ -29,13 +29,14 @@
           li = guesses[i];
           li.innerText = "";
           li.classList.add("empty");
+          li.temp && li.classList.remove(li.temp);
         }
       },
       colorGuess = function (li, color) {
         li.classList.remove("empty");
         li.classList.add(color);
       },
-      numDiff,
+      numDiff, tempColor, prevTemp,
       setColor = function (n1, n2) {
         numDiff = n1 - n2;
         numDiff < 0 && (numDiff *= -1);
@@ -47,26 +48,28 @@
       },
       submitGuess = function () {
         if (checkOver()) {
-          displayMessage("You can stop guessing. The game is over.");
+          displayMessage("You can stop guessing. The game is over. The answer was: " + numToGuess);
           inputBox.value = "";
           return;
         }
         guess = inputBox.value;
         if (!guess.match(validEntry)) {
           inputBox.value = "";
-          displayMessage("Invalid Entry, please try again");
+          displayMessage("Invalid Entry, please enter a number between 1 and 100");
           return;
         }
         guess *= 1;
         if (guess === numToGuess) {
           displayMessage("You won!!!!!");
         } else if (currentGuesses.indexOf(guess) === -1) {
-          displayMessage("Oof! Try again.");
+          tempColor = setColor(guess, numToGuess);
           li = guesses[currentGuess];
-          colorGuess(li, setColor(guess, numToGuess));
+          li.temp = tempColor;
+          colorGuess(li, tempColor);
           li.innerText = guess;
           currentGuess += 1;
           currentGuesses.push(guess);
+          displayMessage("Oof! You are " + tempColor + (checkOver() ? "...and you lost.": ""));
         } else {
           displayMessage("You've already tried that one!");
         }

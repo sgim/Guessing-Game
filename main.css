@@ -43,7 +43,7 @@ h1 {
 
 #inputBox {
   outline: none;
-  flex: 1;
+  flex: 0.8;
   border: 2px #aaaaaa solid;
   text-align: center;
   font-size: 3rem;
@@ -63,7 +63,7 @@ h1 {
 #message {
   text-align: left;
   vertical-align: middle;
-  flex: 1;
+  flex: 2;
   font-size: 2em;
   background: white;
   color: black;
@@ -71,6 +71,7 @@ h1 {
   padding-top: 0.5rem;
   border-radius: 15px 0 0 15px;
   line-height: 2rem;
+  margin-left: 20px;
 }
 
 #buttons {
@@ -117,25 +118,25 @@ li {
   font-size: 2rem;
   height: 5rem;
 }
+li.superhot {
+  background: #ff0000;
+}
+li.hot {
+  background: #ff4d4d;
+}
+li.warm {
+  background: #ff8080;
+}
+li.freezing {
+  background: #003d99;
+}
+li.cold {
+  background: #0066ff;
+}
+li.chilly {
+  background: #99cbff;
+}
+
 li.empty {
   background: #aaaaaa;
 }
-li.superhot {
-  background: #f00000;
-}
-li.hot {
-  background: #a70000;
-}
-li.warm {
-  background: #550000;
-}
-li.freezing {
-  background: #0000f0;
-}
-li.cold {
-  background: #0000a7;
-}
-li.chilly {
-  background: #000055;
-}
-

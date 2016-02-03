@@ -6,17 +6,136 @@ html, body, button, p, img, div, h1, h2, h3, a {
   font: inherit;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background: #777777;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
 }
 
+h1 {
+  color: white;
+  font-size: 3rem;
+  border-bottom: 3px solid black;
+  padding: 0.5rem 0 0.2rem 0;
+}
 
+#instructions {
+  flex: 1;
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
+}
+
+#inputArea {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+}
 
 #inputBox {
   outline: none;
+  flex: 1;
+  border: 2px #aaaaaa solid;
+  text-align: center;
+  font-size: 3rem;
+  margin-left: 15px;
 }
 #inputBox:invalid {
   background: #dd0000;
 }
+
+#infoBox {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  margin-left: 20px;
+}
+
+#message {
+  text-align: left;
+  vertical-align: middle;
+  flex: 1;
+  font-size: 2em;
+  background: white;
+  color: black;
+  padding-left: 20px;
+  padding-top: 0.5rem;
+  border-radius: 15px 0 0 15px;
+  line-height: 2rem;
+}
+
+#buttons {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+button {
+  font-size: 2rem;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 20%;
+}
+button:hover {
+  background: white;
+}
+
+ul {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 0;
+}
+ul:first-child {
+  font-size: 3rem;
+}
+
+#oldGuess {
+  text-transform: uppercase;
+  flex: 3;
+}
+
+li {
+  flex: 1;
+  list-style-type: none;
+  border: 2px black solid;
+  color: white;
+  font-size: 2rem;
+  height: 5rem;
+}
+li.empty {
+  background: #aaaaaa;
+}
+li.superhot {
+  background: #f00000;
+}
+li.hot {
+  background: #a70000;
+}
+li.warm {
+  background: #550000;
+}
+li.freezing {
+  background: #0000f0;
+}
+li.cold {
+  background: #0000a7;
+}
+li.chilly {
+  background: #000055;
+}
+

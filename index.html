@@ -11,8 +11,27 @@
   
     <h1>The Ultimate Guessing Game</h1>
     <h2 id="instructions">Pick a number between 1 and 100</h2>
-    <input id="inputBox" pattern="^(100|\d{1,2}$" autofocus>
-  
+
+    <div id="inputArea">
+      <input id="inputBox" pattern="(100|\d{1,2})" autofocus>
+      <div id="infoBox">
+        <h2 id="message"></h2>
+        <div id="buttons">
+          <button id="submit">submit</button>
+          <button id="hint">hint</button>
+          <button id="reset">reset</button>
+        </div>
+      </div>
+    </div>
+
+    <ul >
+      <li id="oldGuess">guesses</li>
+      <li class="empty guess"></li>
+      <li class="empty guess"></li>
+      <li class="empty guess"></li>
+      <li class="empty guess"></li>
+      <li class="empty guess"></li>
+    </ul>
     <script src="guess.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@
       message = getID("message"),
       instructions = getID("instructions"),
       guesses = getClass("guess"),
-      validEntry = /^(100|\d{1,2})$/,
+      validEntry = /^(100|([1-9][0-9]?))$/,
       i, hintMessage, numToGuess, currentGuess, currentGuesses, totalGuesses, guess, li,
       reset = function () {
         numToGuess = getRandom();
@@ -24,7 +24,7 @@
         currentGuesses = [];
         currentGuess = 0;
         totalGuesses = guesses.length;
-        displayMessage("Take your best guess");
+        displayMessage("Pick any number between 1 and 100");
         for(i = 0; i < totalGuesses; i += 1) {
           li = guesses[i];
           li.innerText = "";

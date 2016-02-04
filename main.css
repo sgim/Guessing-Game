@@ -11,112 +11,131 @@ html {
 }
 
 body {
-  background: #777777;
-  display: flex;
-  flex-direction: column;
+  background: #99ccff;
   text-align: center;
-  align-items: stretch;
-  align-content: stretch;
   height: 100%;
 }
 
 h1 {
   color: white;
-  font-size: 3rem;
-  border-bottom: 3px solid black;
-  padding: 0.5rem 0 0.2rem 0;
+  font-size: 7vw;
+  font-family: Arial;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+  padding: 2rem 0 2rem 0;
+  text-shadow: 1px 1px 22px #000000;
+  background: #66ccff;
 }
 
-#instructions {
-  flex: 1;
-  font-size: 1.5rem;
-  padding: 1rem 0 1rem 0;
+#main {
+  padding: 0 15px 0 15px;
+  height: 40%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #inputArea {
-  flex: 3;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: stretch;
+  width: 30%;
+  height: 100%;
+  float:left;
 }
 
 #inputBox {
-  outline: none;
-  flex: 0.8;
-  border: 2px #aaaaaa solid;
+  height: 60%;
+  width: 100%;
+  font-size: 3em;
+  border: 4px #000000 solid;
   text-align: center;
-  font-size: 3rem;
-  margin-left: 15px;
 }
 #inputBox:invalid {
   background: #dd0000;
 }
 
-#infoBox {
-  display: flex;
-  flex-direction: column;
-  flex: 3;
-  margin-left: 20px;
+#submit {
+  font-size: 1.5em;
+  height: 20%;
+  width: 80%;
+  border-radius: 0 0 15px 15px;
+  margin-left: 0.5rem;
+  margin-top: 0.02rem;
+  border: black dashed;
+  border-width: 0 2px 2px 2px;
+}
+
+#messageArea {
+  float: right;
+  display: inline;
+  width: 60%;
+  height: 100%;
 }
 
 #message {
   text-align: left;
   vertical-align: middle;
-  flex: 2;
-  font-size: 2em;
-  background: white;
+  font-size: 1.8em;
   color: black;
-  padding-left: 20px;
-  padding-top: 0.5rem;
-  border-radius: 15px 0 0 15px;
-  line-height: 2rem;
-  margin-left: 20px;
+  padding: 10px 20px 1rem 20px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  height: 30%;
+  border: 5px black solid;
+}
+.outline {
+  outline: none;
 }
 
-#buttons {
-  flex: 2;
-  display: flex;
-  flex-direction: row;
-  padding: 0.5rem;
-  justify-content: space-around;
-  align-content: stretch;
-  align-items: stretch;
+.button {
+  font-size: 1.9rem;
+  height: 30%;
+  width: 30%;
+  border-radius: 15px 15px 15px 15px;
+  border: #000000 solid 2px;
+}
+#hint {
+  margin-left: 10%;
+  float: left;
+}
+#reset {
+  margin-right: 10%;
+  float: right;
 }
 
 button {
-  font-size: 2rem;
-  height: 100%;
-  padding: 1rem;
-  border-radius: 15px;
-  width: 20%;
+  background: #33cccc;
+  text-transform: uppercase;
 }
 button:hover {
-  background: white;
+  background: #ffff99;
+}
+button:active {
+  color:red;
 }
 
 ul {
-  flex: 2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding: 1rem 0 1rem 0;
-}
-ul:first-child {
-  font-size: 3rem;
-}
-
-#oldGuess {
-  text-transform: uppercase;
-  flex: 3;
 }
 
 li {
   flex: 1;
   list-style-type: none;
   border: 2px black solid;
+  border-top: 4px black solid;
+  border-bottom: 4px black solid;
   color: white;
   font-size: 2rem;
   height: 5rem;
+  line-height: 2.5em;
 }
 li.superhot {
   background: #ff0000;
@@ -138,5 +157,5 @@ li.chilly {
 }
 
 li.empty {
-  background: #aaaaaa;
+  background: #f3f1f1;
 }

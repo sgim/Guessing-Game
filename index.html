@@ -9,21 +9,20 @@
   </head>
   <body>
   
-    <h1>The Ultimate Guessing Game</h1>
-    <h2 id="instructions">Pick a number between 1 and 100</h2>
-
-    <div id="inputArea">
-      <input id="inputBox" pattern="(100|\d{1,2})" autofocus>
-      <h2 id="message"></h2>
+    <h1>The Guessing Game</h1>
+    <div id="main">
+      <div id="inputArea">
+        <input id="inputBox" pattern="(100|([1-9][0-9]?))" autofocus class="outline">
+        <button id="submit" class="outline">submit</button>
+      </div>
+      <div id="messageArea">
+        <h2 id="message"></h2>
+        <button id="hint" class="button outline">hint</button>
+        <button id="reset" class="button outline">reset</button>
+      </div>
     </div>
-    <div id="buttons">
-      <button id="submit">submit</button>
-      <button id="hint">hint</button>
-      <button id="reset">reset</button>
-    </div>
-
     <ul >
-      <li id="oldGuess">guesses</li>
+      <li class="empty guess"></li>
       <li class="empty guess"></li>
       <li class="empty guess"></li>
       <li class="empty guess"></li>

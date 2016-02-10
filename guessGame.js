@@ -40,8 +40,8 @@ $(document).on("ready", function () {
       checkOver = function () {
         return playerGuessCount === totalGuesses;
       },
-      lowerOrHigher = function (n1, n2) {
-        return (n1 - n2) > 0 ? "lower": "higher";
+      lowerOrHigher = function (n) {
+        return n > 0 ? "lower": "higher";
       },
       tempColor, difference, difMessage,
       checkGuess = function () {
@@ -61,7 +61,8 @@ $(document).on("ready", function () {
           displayMessage("You won!!!!!");
 	  audioWin.play();
         } else if (previousPlayerGuesses.indexOf(playerGuess) === -1) {
-	  difMessage = lowerOrHigher(playerGuess, winningNumber);
+	  difference = playerGuess - winningNumber;
+	  difMessage = lowerOrHigher(difference);
           tempColor = setColor(Math.abs(difference));
           li = guessBoxes[playerGuessCount];
           li.temp = tempColor;

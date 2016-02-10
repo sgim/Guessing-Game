@@ -1,0 +1,182 @@
+
+$color_base: #FCDB6E;
+$color_highlight: #042ED7;
+
+$button_color: #FB7537;
+$button_hover: #dd9944;
+$button_text: #3C0132;
+$button_text_active: red;
+
+$message_text: $color_highlight;
+$message_background: $color_base;
+
+$input_text: $color_highlight;
+$input_text_invalid: white;
+$input_valid: $color_base;
+$input_invalid: #FB4737;
+
+html, body, button, p, img, div, h1, h2, h3, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: Arial;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #4B80FB;
+  text-align: center;
+  height: 100%;
+}
+
+h1 {
+  color: $color_highlight;
+  font-size: 7vw;
+  text-align: left;
+  font-family: Arial;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 0 1px 15px;
+  background: $color_base;
+}
+
+#main {
+  padding: 0 15px 0 15px;
+  height: 40%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#inputArea {
+  width: 30%;
+  height: 100%;
+  float:left;
+}
+
+#inputBox {
+  
+  height: 60%;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  color: $input_text;
+  background: $input_valid;
+  border: 4px solid $input_valid;
+  border-radius: 15px 15px 15px 15px;
+  &:invalid {
+    background: $input_invalid;
+    color: $input_text_invalid;
+  }
+}
+
+#submit {
+  font-size: 1.5em;
+  height: 20%;
+  width: 80%;
+  border-radius: 0 0 15px 15px;
+  margin-left: 0.5rem;
+  margin-top: 0.02rem;
+  border-width: 0 2px 2px 2px;
+}
+
+#messageArea {
+  float: right;
+  display: inline;
+  width: 60%;
+  height: 100%;
+}
+
+#message {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: $message_text;
+  background: $message_background;
+  padding: 10px 20px 1rem 20px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  height: 30%;
+}
+.outline {
+  outline: none;
+}
+
+.button {
+  font-size: 1.9rem;
+  font-weight: bold;
+  height: 30%;
+  width: 30%;
+  border-radius: 15px 15px 15px 15px;
+}
+#hint {
+  margin-left: 10%;
+  float: left;
+}
+#reset {
+  margin-right: 10%;
+  float: right;
+}
+
+button {
+  background: $button_color;
+  text-transform: uppercase;
+  color: $button_text;
+  &:hover {
+    background: $button_hover;
+  }
+  &:active {
+    color: $button_text_active;
+  }
+}
+
+ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 0;
+}
+
+li {
+  $superhot: #FA1100;
+  $freezing: #006BBD;
+  flex: 1;
+  list-style-type: none;
+  border: 2px grey solid;
+  color: black;
+  font-family: Monaco, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  height: 5rem;
+  line-height: 2.5em;
+  background: #f3f1f1;
+  &.superhot {
+    background: $superhot;
+  }
+  &.hot {
+    background: lighten($superhot, 20%);
+  }
+  &.warm {
+    background: lighten($superhot, 40%);
+  }
+  &.freezing {
+    background: $freezing;
+  }
+  &.cold {
+    background: lighten($freezing, 20%);
+  }
+  &.chilly {
+    background: lighten($freezing, 40%);
+  }
+}
